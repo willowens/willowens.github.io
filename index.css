@@ -7,3 +7,12 @@ h1 {
     border-bottom: 1px solid saddlebrown;
     width: 100vw;
 }
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: seagreen;
+  color: saddlebrown;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
