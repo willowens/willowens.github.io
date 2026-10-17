@@ -1,0 +1,9 @@
+body {
+    background-color: beige;
+    color: seagreen;
+}
+
+h1 {
+    border-bottom: 1px solid saddlebrown;
+    width: 100vw;
+}
