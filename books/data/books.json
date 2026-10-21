@@ -7,14 +7,22 @@
     "review": "one of the best",
     "cover": "east-of-eden.jpeg"
   },
-    {
-      "title": "The Count of Monte Cristo",
-      "author": "Alexandre Dumas",
-      "rating": 5,
-      "pageCount": 1243,
-      "review": "a thrilling story",
-      "cover": "count-of-monte-cristo.jpeg"
-    },
+  {
+    "title": "The Count of Monte Cristo",
+    "author": "Alexandre Dumas",
+    "rating": 5,
+    "pageCount": 1243,
+    "review": "a thrilling story",
+    "cover": "count-of-monte-cristo.jpeg"
+  },
+  {
+    "title": "Surely you're joking, Mr. Feynman!",
+    "author": "Richard Feynman & Ralph Leighton",
+    "rating": 4,
+    "pageCount": 400,
+    "review": "\"Learn what the rest of the world is like. The variety is worthwhile.\"",
+    "cover": "joking-mr-feynman.jpeg"
+  },
   {
     "title": "Blood Meridian",
     "author": "Cormac McCarthy",
@@ -30,5 +38,13 @@
     "pageCount": 288,
     "review": "creepy, interesting, devastating",
     "cover": "never-let-me-go.jpeg"
+  },
+  {
+    "title": "A Little Life",
+    "author": "Hanya Yangihara",
+    "rating": 2,
+    "pageCount": 814,
+    "review": "this was not an enjoyable read",
+    "cover": "a-little-life.jpeg"
   }
 ]
