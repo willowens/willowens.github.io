@@ -1,12 +1,12 @@
-class BookCard extends HTMLElement {
-  constructor(book) {
+class BookCard extends HTMLElement{
+  constructor(book){
     super();
     this.classList.add('book-card');
     this.book = book;
   }
 
-  connectedCallback() {
-    if (this._rendered) return;
+  connectedCallback(){
+    if(this._rendered) return;
     this._rendered = true;
 
     const { title, author, rating, review, cover } = this.book;
@@ -36,17 +36,16 @@ class BookCard extends HTMLElement {
     });
   }
 }
-
 customElements.define('book-card', BookCard);
 
-async function loadBooks() {
+async function loadBooks(){
   const response = await fetch('./data/books.json');
-  if (!response.ok) throw new Error('Network response was not ok');
+  if(!response.ok) throw new Error('Network response was not ok');
 
   const books = await response.json();
   const bookSection = document.querySelector('.books-section');
 
-  for (const book of books) {
+  for(const book of books){
     bookSection.appendChild(new BookCard(book));
   }
 }
