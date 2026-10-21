@@ -17,6 +17,20 @@
         <h1>some books i've read</h1>
         <h3>and some thoughts</h3>
     </header>
+    <div class="books-filter">
+        <label class="books-search-label" for="books-search">search</label>
+        <input class="books-search" type="search" placeholder="filter books…" autocomplete="off">
+        <details class="books-fields">
+            <summary>fields</summary>
+            <fieldset class="books-fields-list">
+                <legend class="hidden">Search fields</legend>
+                <label><input type="checkbox" name="field" value="title" checked> title</label>
+                <label><input type="checkbox" name="field" value="author" checked> author</label>
+                <label><input type="checkbox" name="field" value="pageCount" checked> page count</label>
+                <label><input type="checkbox" name="field" value="rating" checked> rating</label>
+            </fieldset>
+        </details>
+    </div>
     <div class="books-section"></div>
 </body>
 </html>
