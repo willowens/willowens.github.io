@@ -1,0 +1,34 @@
+[
+  {
+    "title": "East of Eden",
+    "author": "John Steinbeck",
+    "rating": 5,
+    "pageCount": 601,
+    "review": "one of the best",
+    "cover": "east-of-eden.jpeg"
+  },
+    {
+      "title": "The Count of Monte Cristo",
+      "author": "Alexandre Dumas",
+      "rating": 5,
+      "pageCount": 1243,
+      "review": "a thrilling story",
+      "cover": "count-of-monte-cristo.jpeg"
+    },
+  {
+    "title": "Blood Meridian",
+    "author": "Cormac McCarthy",
+    "rating": 3,
+    "pageCount": 337,
+    "review": "brutal",
+    "cover": "blood-meridian.jpeg"
+  },
+  {
+    "title": "Never Let Me Go",
+    "author": "Kazuo Ishiguro",
+    "rating": 4,
+    "pageCount": 288,
+    "review": "creepy, interesting, devastating",
+    "cover": "never-let-me-go.jpeg"
+  }
+]

@@ -1,0 +1,126 @@
+.projects-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, sans-serif;
+    width: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: seagreen;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    user-select: none;
+    color: beige;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .preview {
+    width: 100%;
+    height: 180px;
+    background:
+        linear-gradient(145deg, rgba(245, 245, 220, 0.12), transparent 55%),
+        seagreen;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.project-card .preview-label {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: beige;
+}
+
+.project-card .content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project-card .title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: beige;
+    line-height: 1.3;
+}
+
+.project-card .summary {
+    margin: 0;
+    font-size: 0.85rem;
+    color: beige;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.project-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 4px;
+}
+
+.project-card .tag {
+    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+    color: saddlebrown;
+    background: beige;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+}
+
+.project-detail {
+    max-width: 40rem;
+    padding: 0 1.5rem 2.5rem;
+    box-sizing: border-box;
+}
+
+.project-detail .lede {
+    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: seagreen;
+}
+
+.project-detail .body {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: seagreen;
+}
+
+.project-detail .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-detail .tag {
+    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    color: beige;
+    background: seagreen;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}

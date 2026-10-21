@@ -2,25 +2,56 @@ body {
     background-color: beige;
     color: seagreen;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+    min-height: 100vh;
 }
 
-h1 {
-    border-bottom: 1px solid saddlebrown;
-    width: 100vw;
-}
-a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: seagreen;
-  color: saddlebrown;
-  text-decoration: none;
-  border-radius: 5px;
-  text-align: center;
+.page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.75rem 1.5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-a:hover{
-    background-color: yellowgreen;
+.page-header h1 {
+    margin: 0;
+    width: auto;
+    border-bottom: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: seagreen;
+}
+
+.page-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.page-nav a {
+    display: inline-block;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    color: saddlebrown;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.page-nav a:hover {
+    background: none;
+    color: seagreen;
+    border-bottom-color: seagreen;
 }
