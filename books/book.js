@@ -43,7 +43,7 @@ customElements.define('book-card', BookCard);
 
 function getSelectedFields(){
   return [...document.querySelectorAll('input[name="field"]:checked')]
-    .map((input) => input.value);
+    .map(input => input.value);
 }
 
 function bookMatches(book, query, fields){
@@ -57,16 +57,33 @@ function bookMatches(book, query, fields){
   });
 }
 
+function sortBooks(books, sortField){
+  return [...books].sort((a, b) => {
+    let valA = a[sortField];
+    let valB = b[sortField];
+
+    if (typeof valA === 'string') {
+      valA = valA ? valA.toLowerCase() : '';
+      valB = valB ? valB.toLowerCase() : '';
+      return valA.localeCompare(valB);
+    } else {
+      return (valA ?? 0) - (valB ?? 0);
+    }
+  });
+}
+
 function filterBooks(books){
   const query = document.querySelector('.books-search').value.trim().toLowerCase();
   const fields = getSelectedFields();
+  const sortField = document.querySelector('input[name="sort"]:checked').value;
   const bookSection = document.querySelector('.books-section');
 
+  const matchedBooks = books.filter((book) => bookMatches(book, query, fields));
+  const sortedBooks = sortBooks(matchedBooks, sortField);
+
   bookSection.replaceChildren();
-  for(const book of books){
-    if(bookMatches(book, query, fields)){
-      bookSection.appendChild(new BookCard(book));
-    }
+  for(const book of sortedBooks){
+    bookSection.appendChild(new BookCard(book));
   }
 }
 
@@ -78,6 +95,7 @@ async function loadBooks(){
 
   document.querySelector('.books-search').addEventListener('input', () => filterBooks(books));
   document.querySelector('.books-fields-list').addEventListener('change', () => filterBooks(books));
+  document.querySelector('.books-sort-list').addEventListener('change', () => filterBooks(books));
 
   filterBooks(books);
 }
