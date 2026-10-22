@@ -5,15 +5,30 @@
     <title>will's site</title>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/ico" href="./images/favicon.ico">
+    <script type="module" src="./chess.js"></script>
 </head>
 <body>
     <header class="page-header">
-        <nav class="page-nav">
-            <a href="/projects">/projects</a>
-            <a href="/books">/books</a>
-        </nav>
-        <h1>will's site</h1>
-        <h3>a place for some things</h3>
+        <div class="header-main">
+            <div class="header-left">
+                <nav class="page-nav">
+                    <a href="/projects">/projects</a>
+                    <a href="/books">/books</a>
+                </nav>
+                <h1>will's site</h1>
+                <h3>a place for some things</h3>
+            </div>
+            <div class="header-right">
+                <div class="chess-ratings">
+                    <div class="chess-ratings-title">chess ratings</div>
+                    <div class="chess-ratings-list">
+                        <span class="rapid-rating"></span>
+                        <span class="blitz-rating"></span>
+                        <span class="bullet-rating"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 </body>
 </html>
