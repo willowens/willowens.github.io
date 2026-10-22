@@ -46,5 +46,61 @@
     "pageCount": 814,
     "review": "this was not an enjoyable read",
     "cover": "a-little-life.jpeg"
+  },
+  {
+    "title": "11/22/63",
+    "author": "Stephen King",
+    "rating": 4,
+    "pageCount": 842,
+    "review": "sometimes time traveling can be done well",
+    "cover": "11-22-63.jpeg"
+  },
+  {
+    "title": "The Girl with the Dragon Tattoo",
+    "author": "Stieg Larsson",
+    "rating": 3,
+    "pageCount": 590,
+    "review": "its ok",
+    "cover": "dragon-tattoo.jpeg"
+  },
+  {
+    "title": "Kafka on the Shore",
+    "author": "Haruki Murakami",
+    "rating": 3,
+    "pageCount": 467,
+    "review": "peculiar, murakami is always an interesting read",
+    "cover": "kafka-shore.jpeg"
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "rating": 3,
+    "pageCount": 259,
+    "review": "unsettling prediction?",
+    "cover": "brave-new-world.jpeg"
+  },
+  {
+    "title": "The Man in the High Castle",
+    "author": "Philip K. Dick",
+    "rating": 2,
+    "pageCount": 274,
+    "review": "its regarded as a classic, i just didnt enjoy it.",
+    "cover": "man-high-castle.jpeg"
+  },
+  {
+    "title": "All the Bright Places",
+    "author": "Jennifer Niven",
+    "rating": 2,
+    "pageCount": 388,
+    "review": "\"Is today a good day to die?\"",
+    "cover": "all-the-bright-places.jpeg"
+  },
+  {
+    "title": "Lolita",
+    "author": "Vladimir Nabokov",
+    "rating": 4,
+    "pageCount": 317,
+    "review": "simply put; it is one of the best written books of all time",
+    "cover": "lolita.jpeg"
   }
 ]

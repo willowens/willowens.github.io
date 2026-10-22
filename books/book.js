@@ -70,20 +70,15 @@ function filterBooks(books){
   }
 }
 
-function setupFilter(books){
-  const search = document.querySelector('.books-search');
-  const fields = document.querySelector('.books-fields-list');
-
-  search.addEventListener('input', () => filterBooks(books));
-  fields.addEventListener('change', () => filterBooks(books));
-}
-
 async function loadBooks(){
   const response = await fetch('./data/books.json');
   if(!response.ok) throw new Error('Network response was not ok');
 
   const books = await response.json();
-  setupFilter(books);
+
+  document.querySelector('.books-search').addEventListener('input', () => filterBooks(books));
+  document.querySelector('.books-fields-list').addEventListener('change', () => filterBooks(books));
+
   filterBooks(books);
 }
 
