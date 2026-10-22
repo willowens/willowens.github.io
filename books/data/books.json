@@ -5,7 +5,9 @@
     "rating": 5,
     "pageCount": 601,
     "review": "one of the best",
-    "cover": "east-of-eden.jpeg"
+    "cover": "east-of-eden.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
   },
   {
     "title": "The Count of Monte Cristo",
@@ -13,7 +15,9 @@
     "rating": 5,
     "pageCount": 1243,
     "review": "a thrilling story",
-    "cover": "count-of-monte-cristo.jpeg"
+    "cover": "count-of-monte-cristo.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
   },
   {
     "title": "Surely you're joking, Mr. Feynman!",
@@ -21,7 +25,9 @@
     "rating": 4,
     "pageCount": 400,
     "review": "\"Learn what the rest of the world is like. The variety is worthwhile.\"",
-    "cover": "joking-mr-feynman.jpeg"
+    "cover": "joking-mr-feynman.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
   },
   {
     "title": "Blood Meridian",
@@ -29,7 +35,9 @@
     "rating": 3,
     "pageCount": 337,
     "review": "brutal",
-    "cover": "blood-meridian.jpeg"
+    "cover": "blood-meridian.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
   },
   {
     "title": "Never Let Me Go",
@@ -37,7 +45,9 @@
     "rating": 4,
     "pageCount": 288,
     "review": "creepy, interesting, devastating",
-    "cover": "never-let-me-go.jpeg"
+    "cover": "never-let-me-go.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
   },
   {
     "title": "A Little Life",
@@ -45,7 +55,9 @@
     "rating": 2,
     "pageCount": 814,
     "review": "this was not an enjoyable read",
-    "cover": "a-little-life.jpeg"
+    "cover": "a-little-life.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
   },
   {
     "title": "11/22/63",
@@ -53,7 +65,9 @@
     "rating": 4,
     "pageCount": 842,
     "review": "sometimes time traveling can be done well",
-    "cover": "11-22-63.jpeg"
+    "cover": "11-22-63.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
   },
   {
     "title": "The Girl with the Dragon Tattoo",
@@ -61,7 +75,9 @@
     "rating": 3,
     "pageCount": 590,
     "review": "its ok",
-    "cover": "dragon-tattoo.jpeg"
+    "cover": "dragon-tattoo.jpeg",
+    "series": "dragon tattoo",
+    "date_finished": "1/1/97"
   },
   {
     "title": "Kafka on the Shore",
@@ -69,7 +85,9 @@
     "rating": 3,
     "pageCount": 467,
     "review": "peculiar, murakami is always an interesting read",
-    "cover": "kafka-shore.jpeg"
+    "cover": "kafka-shore.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
   },
   {
     "title": "Brave New World",
@@ -77,7 +95,9 @@
     "rating": 3,
     "pageCount": 259,
     "review": "unsettling prediction?",
-    "cover": "brave-new-world.jpeg"
+    "cover": "brave-new-world.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
   },
   {
     "title": "The Man in the High Castle",
@@ -85,7 +105,9 @@
     "rating": 2,
     "pageCount": 274,
     "review": "its regarded as a classic, i just didnt enjoy it.",
-    "cover": "man-high-castle.jpeg"
+    "cover": "man-high-castle.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
   },
   {
     "title": "All the Bright Places",
@@ -93,7 +115,9 @@
     "rating": 2,
     "pageCount": 388,
     "review": "\"Is today a good day to die?\"",
-    "cover": "all-the-bright-places.jpeg"
+    "cover": "all-the-bright-places.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
   },
   {
     "title": "Lolita",
@@ -101,6 +125,58 @@
     "rating": 4,
     "pageCount": 317,
     "review": "simply put; it is one of the best written books of all time",
-    "cover": "lolita.jpeg"
+    "cover": "lolita.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "A Game of Thrones",
+    "author": "George R. R. Martin",
+    "rating": 4,
+    "pageCount": 807,
+    "review": "",
+    "cover": "game-of-thrones.jpeg",
+    "series": "asoiaf",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "A Clash of Kings",
+    "author": "George R. R. Martin",
+    "rating": 4,
+    "pageCount": 969,
+    "review": "",
+    "cover": "clash-of-kings.jpeg",
+    "series": "asoiaf",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "A Storm of Swords",
+    "author": "George R. R. Martin",
+    "rating": 5,
+    "pageCount": 1128,
+    "review": "",
+    "cover": "storm-of-swords.jpeg",
+    "series": "asoiaf",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "A Feast for Crows ",
+    "author": "George R. R. Martin",
+    "rating": 4,
+    "pageCount": 978,
+    "review": "",
+    "cover": "feast-for-crows.jpeg",
+    "series": "asoiaf",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "A Dance with Dragons  ",
+    "author": "George R. R. Martin",
+    "rating": 5,
+    "pageCount": 1051,
+    "review": "",
+    "cover": "dance-with-dragons.jpeg",
+    "series": "asoiaf",
+    "date_finished": "1/1/97"
   }
 ]
