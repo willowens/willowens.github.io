@@ -178,5 +178,185 @@
     "cover": "dance-with-dragons.jpeg",
     "series": "asoiaf",
     "date_finished": "1/1/97"
+  },
+  {
+    "title": "All the Light we Cannot See",
+    "author": "Anthony Doerr",
+    "rating": 4,
+    "pageCount": 530,
+    "review": "descriptive",
+    "cover": "all-the-light.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "The Employee",
+    "author": "Olga Ravn",
+    "rating": 3,
+    "pageCount":125,
+    "review": "weird read",
+    "cover": "the-employee.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "Cloud Cuckoo Land",
+    "author": "Anthony Doerr",
+    "rating": 3,
+    "pageCount": 623,
+    "review": "my first read with multi-perspective, interweaving storylines; it was pretty good",
+    "cover": "cloud-cuckoo-land.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "Circe",
+    "author": "Madeline Miller",
+    "rating": 3,
+    "pageCount": 385,
+    "review": "circe is a fascinating character",
+    "cover": "circe.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "rating": 4,
+    "pageCount": 158,
+    "review": "a classic",
+    "cover": "fahrenheit-451.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "Sea of Tranquility",
+    "author": "Emily St. John Mandel",
+    "rating": 3,
+    "pageCount": 255,
+    "review": "\"No star burns forever\"",
+    "cover": "sea-of-tranquility.jpeg",
+    "series": "",
+    "date_finished":"1/1/97"
+  },
+  {
+    "title": "Artemis",
+    "author": "Andy Weir",
+    "rating": 3,
+    "pageCount": 305,
+    "review": "mediocre compared to his other works",
+    "cover": "artemis.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "IT",
+    "author": "Stephen King",
+    "rating": 4,
+    "pageCount": 1153,
+    "review": "just an incredible amount of detail",
+    "cover": "it.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "No Longer Human",
+    "author": "Osamu Dazai",
+    "rating": 3,
+    "pageCount": 177,
+    "review": "sad",
+    "cover": "no-longer-human.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "The WhaleBone Theatre",
+    "author": "Joanna Quinn",
+    "rating": 3,
+    "pageCount": 553,
+    "review": "this was a slow read, but im glad i never gave up",
+    "cover": "the-whalebone-theatre.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "Stoner",
+    "author": "John Williams",
+    "rating": 5,
+    "pageCount": 278,
+    "review": "a story about a guy that everyone should read",
+    "cover": "stoner.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "The Curious Eat Themselves",
+    "author": "John Straley",
+    "rating": 2,
+    "pageCount": 264,
+    "review": "a bad thriller",
+    "cover": "the-curious-eat-themselves.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel Garcia Marquez",
+    "rating": 3,
+    "pageCount": 417,
+    "review": "you will find this book on many lists of the best 100 books of all time, it is not one of mine, but that is ok",
+    "cover": "100-years-of-solitude.jpeg",
+    "series": "",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "Children of Time",
+    "author": "Adrian Tchaikovsky",
+    "rating": 3,
+    "pageCount": 600,
+    "review": "alien spiders, ehh",
+    "cover": "children-of-time.jpeg",
+    "series": "time",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "Leviathan Wakes",
+    "author": "James S. A. Corey",
+    "rating": 3,
+    "pageCount": 561,
+    "review": "starts a little slow, but builds into an exciting sci-fi",
+    "cover": "leviathan-wakes.jpeg",
+    "series": "expanse",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "Caliban's War",
+    "author": "James S. A. Corey",
+    "rating": 3,
+    "pageCount": 595,
+    "review": "still alright",
+    "cover": "calibans-war.jpeg",
+    "series": "expanse",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "Abaddon's Gate",
+    "author": "James S. A. Corey",
+    "rating": 4,
+    "pageCount": 539,
+    "review": "best one of this series yet",
+    "cover": "abaddons-gate.jpeg",
+    "series": "expanse",
+    "date_finished": "1/1/97"
+  },
+  {
+    "title": "Cibola Burn",
+    "author": "James S. A. Corey",
+    "rating": 3,
+    "pageCount": 581,
+    "review": "don't think i will ever finish this series, but its impact cannot be understated",
+    "cover": "cibola-burn.jpeg",
+    "series": "expanse",
+    "date_finished": "1/1/97"
   }
 ]
