@@ -35,3 +35,47 @@
 .chess-ratings-list span:nth-child(even) {
     color: var(--link);
 }
+
+.chess-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5rem auto;
+    width: 100%;
+    max-width: 450px;
+    padding: 0 1rem;
+}
+
+.chess-controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.25rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn {
+    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    color: var(--link);
+    background-color: transparent;
+    border: 1px solid var(--link);
+    padding: 0.45rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+    color: var(--link-hover);
+    border-color: var(--link-hover);
+    background-color: var(--bg-soft);
+}
+
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background-color: transparent;
+}
