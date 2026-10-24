@@ -37,12 +37,14 @@
 }
 
 .books-fields,
-.books-sort {
+.books-sort,
+.books-order {
     position: relative;
 }
 
 .books-fields > summary,
-.books-sort > summary {
+.books-sort > summary,
+.books-order > summary {
     list-style: none;
     cursor: pointer;
     font-size: 0.9rem;
@@ -52,24 +54,28 @@
 }
 
 .books-fields > summary::-webkit-details-marker,
-.books-sort > summary::-webkit-details-marker {
+.books-sort > summary::-webkit-details-marker,
+.books-order > summary::-webkit-details-marker {
     display: none;
 }
 
 .books-fields > summary::after,
-.books-sort > summary::after {
+.books-sort > summary::after,
+.books-order > summary::after {
     content: " ▾";
     font-size: 0.75em;
 }
 
 .books-fields[open] > summary,
-.books-sort[open] > summary {
+.books-sort[open] > summary,
+.books-order[open] > summary {
     color: var(--link-hover);
     border-bottom-color: var(--link-hover);
 }
 
 .books-fields-list,
-.books-sort-list {
+.books-sort-list,
+.books-order-list {
     position: absolute;
     top: calc(100% + 0.4rem);
     left: 0;
@@ -87,7 +93,8 @@
 }
 
 .books-fields-list label,
-.books-sort-list label {
+.books-sort-list label,
+.books-order-list label {
     display: flex;
     align-items: center;
     gap: 0.45rem;
@@ -98,7 +105,8 @@
 }
 
 .books-fields-list input,
-.books-sort-list input {
+.books-sort-list input,
+.books-order-list input {
     accent-color: seagreen;
 }
 

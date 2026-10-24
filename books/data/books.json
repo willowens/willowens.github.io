@@ -358,5 +358,235 @@
     "cover": "cibola-burn.jpeg",
     "series": "expanse",
     "date_finished": "1/1/97"
+  },
+  {
+    "title": "The Bell Jar",
+    "author": "Sylvia Plath",
+    "rating": 3,
+    "pageCount": 288,
+    "review": "",
+    "cover": "the-bell-jar.jpeg",
+    "series": "",
+    "date_finished": "07/08/26"
+  },
+  {
+    "title": "Everything is Tuberculosis",
+    "author": "John Green",
+    "rating": 4,
+    "pageCount": 198,
+    "review": "",
+    "cover": "tuberculosis.jpeg",
+    "series": "",
+    "date_finished": "12/12/25"
+  },
+  {
+    "title": "The Lathe of Heaven",
+    "author": "Ursula K. Le Guin",
+    "rating": 2,
+    "pageCount": 176,
+    "review": "no good",
+    "cover": "the-lathe-of-heaven.jpeg",
+    "series": "",
+    "date_finished": "12/09/25"
+  },
+  {
+    "title": "Nuclear War: A Scenario",
+    "author": "Annie Jacobsen",
+    "rating": 4,
+    "pageCount": 373,
+    "review": "kinda important who has their finger on the red button",
+    "cover": "nuclear-war.jpeg",
+    "series": "",
+    "date_finished": "09/29/25"
+  },
+  {
+    "title": "In a Dark, Dark Wood",
+    "author": "Ruth Ware",
+    "rating": 2,
+    "pageCount": 352,
+    "review": "",
+    "cover": "dark-dark-wood.jpeg",
+    "series":"",
+    "date_finished": "07/17/25"
+  },
+  {
+    "title": "Red Rising",
+    "author": "Pierce Brown",
+    "rating": 4,
+    "pageCount": 382,
+    "review": "good sci-fi",
+    "cover": "red-rising.jpeg",
+    "series": "red rising",
+    "date_finished": "07/16/25"
+  },
+  {
+    "title": "Golden Son",
+    "author": "Pierce Brown",
+    "rating": 4,
+    "pageCount": 466,
+    "review": "",
+    "cover": "golden-son.jpeg",
+    "series": "red rising",
+    "date_finished": "08/09/25"
+  },
+  {
+    "title": "Morning Star",
+    "author": "Pierce Brown",
+    "rating": 3,
+    "pageCount": 524,
+    "review": "",
+    "cover": "morning-star.jpeg",
+    "series": "red rising",
+    "date_finished": "09/13/25"
+  },
+  {
+    "title": "Wuthering Heights",
+    "author": "Emily Bronte",
+    "rating": 2,
+    "pageCount": 359,
+    "review": "a classic just not for me",
+    "cover": "wuthering-heights.jpeg",
+    "series": "",
+    "date_finished": "06/02/25"
+  },
+  {
+    "title": "James",
+    "author": "Percival Everett",
+    "rating": 3,
+    "pageCount": 303,
+    "review": "",
+    "cover": "james.jpeg",
+    "series": "",
+    "date_finished": "05/17/25"
+  },
+  {
+    "title": "Billy Summers",
+    "author": "Stephen King",
+    "rating": 3,
+    "pageCount": 528,
+    "review": "he has better thrillers out there",
+    "cover": "billy-summers.jpeg",
+    "series": "",
+    "date_finished": "05/04/25"
+  },
+  {
+    "title": "All the sinners bleed",
+    "author": "S.A. Cosby",
+    "rating": 3,
+    "pageCount": 338,
+    "review": "predictable thriller",
+    "cover": "all-the-sinners-bleed.jpeg",
+    "series": "",
+    "date_finished": "04/16/25"
+  },
+  {
+    "title": "The Fisherman",
+    "author": "John Langan",
+    "rating": 3,
+    "pageCount": 266,
+    "review": "spooky",
+    "cover": "the-fisherman.jpeg",
+    "series": "",
+    "date_finished": "04/12/25"
+  },
+  {
+    "title": "American Prometheus",
+    "author": "Kai Bird",
+    "rating": 4,
+    "pageCount": 721,
+    "review": "arguably the most influentaial scientist in human history",
+    "cover": "american-prometheus.jpeg",
+    "series": "",
+    "date_finished": "03/16/25"
+  },
+  {
+    "title": "Dune Messiah",
+    "author": "Frank Herbert",
+    "rating": 4,
+    "pageCount": 336,
+    "review": "",
+    "cover": "dune-messiah.jpeg",
+    "series": "dune",
+    "date_finished": "02/15/25"
+  },
+  {
+    "title": "The Handmaid's Tale",
+    "author": "Margaret Atwood",
+    "rating": 4,
+    "pageCount": 320,
+    "review": "",
+    "cover": "handmaids-tale.jpeg",
+    "series": "",
+    "date_finished": "02/13/25"
+  },
+  {
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "rating": 3,
+    "pageCount": 512,
+    "review": "",
+    "cover": "sapiens.jpeg",
+    "series": "",
+    "date_finished": "02/04/25"
+  },
+  {
+    "title": "The Lost World",
+    "author": "Michael Crichton",
+    "rating": 3,
+    "pageCount": 448,
+    "review": "",
+    "cover": "the-lost-world.jpeg",
+    "series": "jurassic park",
+    "date_finished": "02/02/25"
+  },
+  {
+    "title": "Crying in H Mart",
+    "author": "Michelle Zauner",
+    "rating": 3,
+    "pageCount": 256,
+    "review": "",
+    "cover": "crying-in-h-mart.jpeg",
+    "series": "",
+    "date_finished": "01/29/25"
+  },
+  {
+    "title": "Fire & Blood",
+    "author": "George R. R. Martin",
+    "rating": 3,
+    "pageCount": 706,
+    "review": "",
+    "cover": "fire-and-blood.jpeg",
+    "series": "",
+    "date_finished": "01/26/25"
+  },
+  {
+    "title": "Flowers in the Attic",
+    "author": "V.C. Andrews",
+    "rating": 3,
+    "pageCount": 389,
+    "review": "this is messed up",
+    "cover": "flowers-in-the-attic.jpeg",
+    "series": "dollanganger",
+    "date_finished": "01/23/25"
+  },
+  {
+    "title": "Jurassic Park",
+    "author": "Michael Crichton",
+    "rating": 4,
+    "pageCount": 466,
+    "review": "dinosaurs are cool",
+    "cover": "jurassic-park.jpeg",
+    "series": "jurassic park",
+    "date_finished": "01/19/25"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "rating": 2,
+    "pageCount": 400,
+    "review": "i just couldnt handle reading this book",
+    "cover": "pride-and-prejudice.jpeg",
+    "series": "",
+    "date_finished": "01/14/25"
   }
 ]

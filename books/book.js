@@ -57,18 +57,21 @@ function bookMatches(book, query, fields){
   });
 }
 
-function sortBooks(books, sortField){
+function sortBooks(books, sortField, sortOrder = 'asc'){
   return [...books].sort((a, b) => {
     let valA = a[sortField];
     let valB = b[sortField];
 
+    let comparison = 0;
     if (typeof valA === 'string') {
       valA = valA ? valA.toLowerCase() : '';
       valB = valB ? valB.toLowerCase() : '';
-      return valA.localeCompare(valB);
+      comparison = valA.localeCompare(valB);
     } else {
-      return (valA ?? 0) - (valB ?? 0);
+      comparison = (valA ?? 0) - (valB ?? 0);
     }
+
+    return sortOrder === 'desc' ? -comparison : comparison;
   });
 }
 
@@ -76,10 +79,11 @@ function filterBooks(books){
   const query = document.querySelector('.books-search').value.trim().toLowerCase();
   const fields = getSelectedFields();
   const sortField = document.querySelector('input[name="sort"]:checked').value;
+  const sortOrder = document.querySelector('input[name="order"]:checked').value;
   const bookSection = document.querySelector('.books-section');
 
   const matchedBooks = books.filter((book) => bookMatches(book, query, fields));
-  const sortedBooks = sortBooks(matchedBooks, sortField);
+  const sortedBooks = sortBooks(matchedBooks, sortField, sortOrder);
 
   bookSection.replaceChildren();
   for(const book of sortedBooks){
@@ -87,7 +91,20 @@ function filterBooks(books){
   }
 }
 
+function setupDropdownCloseHandler(){
+  document.addEventListener('click', event => {
+    const dropdowns = document.querySelectorAll('.books-fields, .books-sort, .books-order');
+    dropdowns.forEach(dropdown => {
+      if (dropdown.hasAttribute('open') && !dropdown.contains(event.target)) {
+        dropdown.removeAttribute('open');
+      }
+    });
+  });
+}
+
 async function loadBooks(){
+  setupDropdownCloseHandler();
+
   const response = await fetch('./data/books.json');
   if(!response.ok) throw new Error('Network response was not ok');
 
@@ -96,6 +113,7 @@ async function loadBooks(){
   document.querySelector('.books-search').addEventListener('input', () => filterBooks(books));
   document.querySelector('.books-fields-list').addEventListener('change', () => filterBooks(books));
   document.querySelector('.books-sort-list').addEventListener('change', () => filterBooks(books));
+  document.querySelector('.books-order-list').addEventListener('change', () => filterBooks(books));
 
   filterBooks(books);
 }
