@@ -110,6 +110,14 @@
     accent-color: seagreen;
 }
 
+.books-count {
+    margin-left: auto;
+    font-size: 0.9rem;
+    color: var(--ink);
+    user-select: none;
+    white-space: nowrap;
+}
+
 .hidden {
     position: absolute;
     width: 1px;

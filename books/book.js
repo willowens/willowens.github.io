@@ -110,6 +110,8 @@ async function loadBooks(){
 
   const books = await response.json();
 
+  document.querySelector('.books-count').textContent = `${books.length} books`;
+
   document.querySelector('.books-search').addEventListener('input', () => filterBooks(books));
   document.querySelector('.books-fields-list').addEventListener('change', () => filterBooks(books));
   document.querySelector('.books-sort-list').addEventListener('change', () => filterBooks(books));
