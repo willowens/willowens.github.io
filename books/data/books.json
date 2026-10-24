@@ -154,7 +154,7 @@
     "rating": 4,
     "pageCount": 530,
     "review": "descriptive",
-    "cover": "all-the-light.jpeg"
+    "cover": "all-the-light-we-cannot-see.jpeg"
   },
   {
     "title": "The Employee",
@@ -162,7 +162,7 @@
     "rating": 3,
     "pageCount":125,
     "review": "weird read",
-    "cover": "the-employee.jpeg"
+    "cover": "the-employees.jpeg"
   },
   {
     "title": "Cloud Cuckoo Land",
@@ -250,7 +250,7 @@
     "rating": 3,
     "pageCount": 417,
     "review": "you will find this book on many lists of the best 100 books of all time, it is not one of mine, but that is ok",
-    "cover": "100-years-of-solitude.jpeg"
+    "cover": "one-hundred-years-of-solitude.jpeg"
   },
   {
     "title": "Children of Time",
@@ -310,7 +310,7 @@
     "rating": 4,
     "pageCount": 198,
     "review": "",
-    "cover": "tuberculosis.jpeg"
+    "cover": "everything-is-tuberculosis.jpeg"
   },
   {
     "title": "The Lathe of Heaven",
@@ -334,7 +334,7 @@
     "rating": 2,
     "pageCount": 352,
     "review": "",
-    "cover": "dark-dark-wood.jpeg"
+    "cover": "in-a-dark-dark-wood.jpeg"
   },
   {
     "title": "Red Rising",
@@ -426,7 +426,7 @@
     "rating": 4,
     "pageCount": 320,
     "review": "",
-    "cover": "handmaids-tale.jpeg"
+    "cover": "the-handmaids-tale.jpeg"
   },
   {
     "title": "Sapiens",
@@ -564,7 +564,7 @@
     "rating": 4,
     "pageCount": 336,
     "review": "suprised me with how good of a thriller this was",
-    "cover": "the-patient.jpeg"
+    "cover": "the-silent-patient.jpeg"
   },
   {
     "title": "The Road",
