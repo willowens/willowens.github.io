@@ -43,13 +43,6 @@ body {
     gap: 0.65rem;
 }
 
-.header-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-top: 0.2rem;
-}
-
 .page-header h1 {
     margin: 0;
     font-size: clamp(2.5rem, 6vw, 3.5rem);
@@ -98,37 +91,6 @@ body {
     border-bottom-color: var(--link-hover);
 }
 
-.chess-ratings {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
-    font-size: 0.95rem;
-    letter-spacing: 0.02em;
-    animation: rise 0.55s ease 0.04s both;
-}
-
-.chess-ratings-title {
-    color: var(--link);
-    margin-bottom: 0.25rem;
-    opacity: 0.9;
-}
-
-.chess-ratings-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.15rem;
-}
-
-.chess-ratings-list span:nth-child(odd) {
-    color: var(--ink);
-}
-
-.chess-ratings-list span:nth-child(even) {
-    color: var(--link);
-}
-
 @keyframes rise {
     from {
         opacity: 0;
@@ -143,8 +105,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
     .page-header h1,
     .page-header h3,
-    .page-nav,
-    .chess-ratings {
+    .page-nav {
         animation: none;
     }
 }
