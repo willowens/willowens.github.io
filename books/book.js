@@ -83,6 +83,14 @@ function filterBooks(books){
   const bookSection = document.querySelector('.books-section');
 
   const matchedBooks = books.filter((book) => bookMatches(book, query, fields));
+
+  const booksCount = document.querySelector('.books-count');
+    if (matchedBooks.length === books.length){
+      booksCount.textContent = `${books.length} books`;
+    } else {
+      booksCount.textContent = `${matchedBooks.length} of ${books.length} books`;
+    }
+
   const sortedBooks = sortBooks(matchedBooks, sortField, sortOrder);
 
   bookSection.replaceChildren();
@@ -109,8 +117,6 @@ async function loadBooks(){
   if(!response.ok) throw new Error('Network response was not ok');
 
   const books = await response.json();
-
-  document.querySelector('.books-count').textContent = `${books.length} books`;
 
   document.querySelector('.books-search').addEventListener('input', () => filterBooks(books));
   document.querySelector('.books-fields-list').addEventListener('change', () => filterBooks(books));
