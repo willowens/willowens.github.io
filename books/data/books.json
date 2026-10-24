@@ -5,9 +5,7 @@
     "rating": 5,
     "pageCount": 601,
     "review": "one of the best",
-    "cover": "east-of-eden.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "east-of-eden.jpeg"
   },
   {
     "title": "The Count of Monte Cristo",
@@ -15,9 +13,7 @@
     "rating": 5,
     "pageCount": 1243,
     "review": "a thrilling story",
-    "cover": "count-of-monte-cristo.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "count-of-monte-cristo.jpeg"
   },
   {
     "title": "Surely you're joking, Mr. Feynman!",
@@ -25,9 +21,7 @@
     "rating": 4,
     "pageCount": 400,
     "review": "\"Learn what the rest of the world is like. The variety is worthwhile.\"",
-    "cover": "joking-mr-feynman.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "joking-mr-feynman.jpeg"
   },
   {
     "title": "Blood Meridian",
@@ -35,9 +29,7 @@
     "rating": 3,
     "pageCount": 337,
     "review": "brutal",
-    "cover": "blood-meridian.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "blood-meridian.jpeg"
   },
   {
     "title": "Never Let Me Go",
@@ -45,9 +37,7 @@
     "rating": 4,
     "pageCount": 288,
     "review": "creepy, interesting, devastating",
-    "cover": "never-let-me-go.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "never-let-me-go.jpeg"
   },
   {
     "title": "A Little Life",
@@ -55,9 +45,7 @@
     "rating": 2,
     "pageCount": 814,
     "review": "this was not an enjoyable read",
-    "cover": "a-little-life.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "a-little-life.jpeg"
   },
   {
     "title": "11/22/63",
@@ -65,9 +53,7 @@
     "rating": 4,
     "pageCount": 842,
     "review": "sometimes time traveling can be done well",
-    "cover": "11-22-63.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "11-22-63.jpeg"
   },
   {
     "title": "The Girl with the Dragon Tattoo",
@@ -75,9 +61,7 @@
     "rating": 3,
     "pageCount": 590,
     "review": "its ok",
-    "cover": "girl-with-dragon-tattoo.jpeg",
-    "series": "dragon tattoo",
-    "date_finished": "1/1/97"
+    "cover": "girl-with-dragon-tattoo.jpeg"
   },
   {
     "title": "Kafka on the Shore",
@@ -85,9 +69,7 @@
     "rating": 3,
     "pageCount": 467,
     "review": "peculiar, murakami is always an interesting read",
-    "cover": "kafka-on-the-shore.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "kafka-on-the-shore.jpeg"
   },
   {
     "title": "Brave New World",
@@ -95,9 +77,7 @@
     "rating": 3,
     "pageCount": 259,
     "review": "unsettling prediction?",
-    "cover": "brave-new-world.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "brave-new-world.jpeg"
   },
   {
     "title": "The Man in the High Castle",
@@ -105,9 +85,7 @@
     "rating": 2,
     "pageCount": 274,
     "review": "its regarded as a classic, i just didnt enjoy it.",
-    "cover": "man-in-the-high-castle.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "man-in-the-high-castle.jpeg"
   },
   {
     "title": "All the Bright Places",
@@ -115,9 +93,7 @@
     "rating": 2,
     "pageCount": 388,
     "review": "\"Is today a good day to die?\"",
-    "cover": "all-the-bright-places.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "all-the-bright-places.jpeg"
   },
   {
     "title": "Lolita",
@@ -125,9 +101,7 @@
     "rating": 4,
     "pageCount": 317,
     "review": "simply put; it is one of the best written books of all time",
-    "cover": "lolita.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "lolita.jpeg"
   },
   {
     "title": "A Game of Thrones",
@@ -136,8 +110,7 @@
     "pageCount": 807,
     "review": "",
     "cover": "game-of-thrones.jpeg",
-    "series": "asoiaf",
-    "date_finished": "1/1/97"
+    "series": "asoiaf"
   },
   {
     "title": "A Clash of Kings",
@@ -146,8 +119,7 @@
     "pageCount": 969,
     "review": "",
     "cover": "clash-of-kings.jpeg",
-    "series": "asoiaf",
-    "date_finished": "1/1/97"
+    "series": "asoiaf"
   },
   {
     "title": "A Storm of Swords",
@@ -156,8 +128,7 @@
     "pageCount": 1128,
     "review": "",
     "cover": "storm-of-swords.jpeg",
-    "series": "asoiaf",
-    "date_finished": "1/1/97"
+    "series": "asoiaf"
   },
   {
     "title": "A Feast for Crows ",
@@ -166,8 +137,7 @@
     "pageCount": 978,
     "review": "",
     "cover": "feast-for-crows.jpeg",
-    "series": "asoiaf",
-    "date_finished": "1/1/97"
+    "series": "asoiaf"
   },
   {
     "title": "A Dance with Dragons  ",
@@ -176,8 +146,7 @@
     "pageCount": 1051,
     "review": "",
     "cover": "dance-with-dragons.jpeg",
-    "series": "asoiaf",
-    "date_finished": "1/1/97"
+    "series": "asoiaf"
   },
   {
     "title": "All the Light we Cannot See",
@@ -185,9 +154,7 @@
     "rating": 4,
     "pageCount": 530,
     "review": "descriptive",
-    "cover": "all-the-light.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "all-the-light.jpeg"
   },
   {
     "title": "The Employee",
@@ -195,9 +162,7 @@
     "rating": 3,
     "pageCount":125,
     "review": "weird read",
-    "cover": "the-employee.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "the-employee.jpeg"
   },
   {
     "title": "Cloud Cuckoo Land",
@@ -205,9 +170,7 @@
     "rating": 3,
     "pageCount": 623,
     "review": "my first read with multi-perspective, interweaving storylines; it was pretty good",
-    "cover": "cloud-cuckoo-land.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "cloud-cuckoo-land.jpeg"
   },
   {
     "title": "Circe",
@@ -215,9 +178,7 @@
     "rating": 3,
     "pageCount": 385,
     "review": "circe is a fascinating character",
-    "cover": "circe.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "circe.jpeg"
   },
   {
     "title": "Fahrenheit 451",
@@ -225,9 +186,7 @@
     "rating": 4,
     "pageCount": 158,
     "review": "a classic",
-    "cover": "fahrenheit-451.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "fahrenheit-451.jpeg"
   },
   {
     "title": "Sea of Tranquility",
@@ -235,9 +194,7 @@
     "rating": 3,
     "pageCount": 255,
     "review": "\"No star burns forever\"",
-    "cover": "sea-of-tranquility.jpeg",
-    "series": "",
-    "date_finished":"1/1/97"
+    "cover": "sea-of-tranquility.jpeg"
   },
   {
     "title": "Artemis",
@@ -245,9 +202,7 @@
     "rating": 3,
     "pageCount": 305,
     "review": "mediocre compared to his other works",
-    "cover": "artemis.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "artemis.jpeg"
   },
   {
     "title": "IT",
@@ -255,9 +210,7 @@
     "rating": 4,
     "pageCount": 1153,
     "review": "just an incredible amount of detail",
-    "cover": "it.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "it.jpeg"
   },
   {
     "title": "No Longer Human",
@@ -265,9 +218,7 @@
     "rating": 3,
     "pageCount": 177,
     "review": "sad",
-    "cover": "no-longer-human.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "no-longer-human.jpeg"
   },
   {
     "title": "The WhaleBone Theatre",
@@ -275,9 +226,7 @@
     "rating": 3,
     "pageCount": 553,
     "review": "this was a slow read, but im glad i never gave up",
-    "cover": "the-whalebone-theatre.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "the-whalebone-theatre.jpeg"
   },
   {
     "title": "Stoner",
@@ -285,9 +234,7 @@
     "rating": 5,
     "pageCount": 278,
     "review": "a story about a guy that everyone should read",
-    "cover": "stoner.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "stoner.jpeg"
   },
   {
     "title": "The Curious Eat Themselves",
@@ -295,9 +242,7 @@
     "rating": 2,
     "pageCount": 264,
     "review": "a bad thriller",
-    "cover": "the-curious-eat-themselves.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "the-curious-eat-themselves.jpeg"
   },
   {
     "title": "One Hundred Years of Solitude",
@@ -305,9 +250,7 @@
     "rating": 3,
     "pageCount": 417,
     "review": "you will find this book on many lists of the best 100 books of all time, it is not one of mine, but that is ok",
-    "cover": "100-years-of-solitude.jpeg",
-    "series": "",
-    "date_finished": "1/1/97"
+    "cover": "100-years-of-solitude.jpeg"
   },
   {
     "title": "Children of Time",
@@ -315,9 +258,7 @@
     "rating": 3,
     "pageCount": 600,
     "review": "alien spiders, ehh",
-    "cover": "children-of-time.jpeg",
-    "series": "time",
-    "date_finished": "1/1/97"
+    "cover": "children-of-time.jpeg"
   },
   {
     "title": "Leviathan Wakes",
@@ -326,8 +267,7 @@
     "pageCount": 561,
     "review": "starts a little slow, but builds into an exciting sci-fi",
     "cover": "leviathan-wakes.jpeg",
-    "series": "expanse",
-    "date_finished": "1/1/97"
+    "series": "expanse"
   },
   {
     "title": "Caliban's War",
@@ -336,8 +276,7 @@
     "pageCount": 595,
     "review": "still alright",
     "cover": "calibans-war.jpeg",
-    "series": "expanse",
-    "date_finished": "1/1/97"
+    "series": "expanse"
   },
   {
     "title": "Abaddon's Gate",
@@ -346,8 +285,7 @@
     "pageCount": 539,
     "review": "best one of this series yet",
     "cover": "abaddons-gate.jpeg",
-    "series": "expanse",
-    "date_finished": "1/1/97"
+    "series": "expanse"
   },
   {
     "title": "Cibola Burn",
@@ -356,8 +294,7 @@
     "pageCount": 581,
     "review": "don't think i will ever finish this series, but its impact cannot be understated",
     "cover": "cibola-burn.jpeg",
-    "series": "expanse",
-    "date_finished": "1/1/97"
+    "series": "expanse"
   },
   {
     "title": "The Bell Jar",
@@ -365,9 +302,7 @@
     "rating": 3,
     "pageCount": 288,
     "review": "",
-    "cover": "the-bell-jar.jpeg",
-    "series": "",
-    "date_finished": "07/08/26"
+    "cover": "the-bell-jar.jpeg"
   },
   {
     "title": "Everything is Tuberculosis",
@@ -375,9 +310,7 @@
     "rating": 4,
     "pageCount": 198,
     "review": "",
-    "cover": "tuberculosis.jpeg",
-    "series": "",
-    "date_finished": "12/12/25"
+    "cover": "tuberculosis.jpeg"
   },
   {
     "title": "The Lathe of Heaven",
@@ -385,9 +318,7 @@
     "rating": 2,
     "pageCount": 176,
     "review": "no good",
-    "cover": "the-lathe-of-heaven.jpeg",
-    "series": "",
-    "date_finished": "12/09/25"
+    "cover": "the-lathe-of-heaven.jpeg"
   },
   {
     "title": "Nuclear War: A Scenario",
@@ -395,9 +326,7 @@
     "rating": 4,
     "pageCount": 373,
     "review": "kinda important who has their finger on the red button",
-    "cover": "nuclear-war.jpeg",
-    "series": "",
-    "date_finished": "09/29/25"
+    "cover": "nuclear-war.jpeg"
   },
   {
     "title": "In a Dark, Dark Wood",
@@ -405,9 +334,7 @@
     "rating": 2,
     "pageCount": 352,
     "review": "",
-    "cover": "dark-dark-wood.jpeg",
-    "series":"",
-    "date_finished": "07/17/25"
+    "cover": "dark-dark-wood.jpeg"
   },
   {
     "title": "Red Rising",
@@ -416,8 +343,7 @@
     "pageCount": 382,
     "review": "good sci-fi",
     "cover": "red-rising.jpeg",
-    "series": "red rising",
-    "date_finished": "07/16/25"
+    "series": "red rising"
   },
   {
     "title": "Golden Son",
@@ -426,8 +352,7 @@
     "pageCount": 466,
     "review": "",
     "cover": "golden-son.jpeg",
-    "series": "red rising",
-    "date_finished": "08/09/25"
+    "series": "red rising"
   },
   {
     "title": "Morning Star",
@@ -436,8 +361,7 @@
     "pageCount": 524,
     "review": "",
     "cover": "morning-star.jpeg",
-    "series": "red rising",
-    "date_finished": "09/13/25"
+    "series": "red rising"
   },
   {
     "title": "Wuthering Heights",
@@ -445,9 +369,7 @@
     "rating": 2,
     "pageCount": 359,
     "review": "a classic just not for me",
-    "cover": "wuthering-heights.jpeg",
-    "series": "",
-    "date_finished": "06/02/25"
+    "cover": "wuthering-heights.jpeg"
   },
   {
     "title": "James",
@@ -455,9 +377,7 @@
     "rating": 3,
     "pageCount": 303,
     "review": "",
-    "cover": "james.jpeg",
-    "series": "",
-    "date_finished": "05/17/25"
+    "cover": "james.jpeg"
   },
   {
     "title": "Billy Summers",
@@ -465,9 +385,7 @@
     "rating": 3,
     "pageCount": 528,
     "review": "he has better thrillers out there",
-    "cover": "billy-summers.jpeg",
-    "series": "",
-    "date_finished": "05/04/25"
+    "cover": "billy-summers.jpeg"
   },
   {
     "title": "All the sinners bleed",
@@ -475,9 +393,7 @@
     "rating": 3,
     "pageCount": 338,
     "review": "predictable thriller",
-    "cover": "all-the-sinners-bleed.jpeg",
-    "series": "",
-    "date_finished": "04/16/25"
+    "cover": "all-the-sinners-bleed.jpeg"
   },
   {
     "title": "The Fisherman",
@@ -485,9 +401,7 @@
     "rating": 3,
     "pageCount": 266,
     "review": "spooky",
-    "cover": "the-fisherman.jpeg",
-    "series": "",
-    "date_finished": "04/12/25"
+    "cover": "the-fisherman.jpeg"
   },
   {
     "title": "American Prometheus",
@@ -495,9 +409,7 @@
     "rating": 4,
     "pageCount": 721,
     "review": "arguably the most influentaial scientist in human history",
-    "cover": "american-prometheus.jpeg",
-    "series": "",
-    "date_finished": "03/16/25"
+    "cover": "american-prometheus.jpeg"
   },
   {
     "title": "Dune Messiah",
@@ -506,8 +418,7 @@
     "pageCount": 336,
     "review": "",
     "cover": "dune-messiah.jpeg",
-    "series": "dune",
-    "date_finished": "02/15/25"
+    "series": "dune"
   },
   {
     "title": "The Handmaid's Tale",
@@ -515,9 +426,7 @@
     "rating": 4,
     "pageCount": 320,
     "review": "",
-    "cover": "handmaids-tale.jpeg",
-    "series": "",
-    "date_finished": "02/13/25"
+    "cover": "handmaids-tale.jpeg"
   },
   {
     "title": "Sapiens",
@@ -525,9 +434,7 @@
     "rating": 3,
     "pageCount": 512,
     "review": "",
-    "cover": "sapiens.jpeg",
-    "series": "",
-    "date_finished": "02/04/25"
+    "cover": "sapiens.jpeg"
   },
   {
     "title": "The Lost World",
@@ -536,8 +443,7 @@
     "pageCount": 448,
     "review": "",
     "cover": "the-lost-world.jpeg",
-    "series": "jurassic park",
-    "date_finished": "02/02/25"
+    "series": "jurassic park"
   },
   {
     "title": "Crying in H Mart",
@@ -545,9 +451,7 @@
     "rating": 3,
     "pageCount": 256,
     "review": "",
-    "cover": "crying-in-h-mart.jpeg",
-    "series": "",
-    "date_finished": "01/29/25"
+    "cover": "crying-in-h-mart.jpeg"
   },
   {
     "title": "Fire & Blood",
@@ -555,9 +459,7 @@
     "rating": 3,
     "pageCount": 706,
     "review": "",
-    "cover": "fire-and-blood.jpeg",
-    "series": "",
-    "date_finished": "01/26/25"
+    "cover": "fire-and-blood.jpeg"
   },
   {
     "title": "Flowers in the Attic",
@@ -565,9 +467,7 @@
     "rating": 3,
     "pageCount": 389,
     "review": "this is messed up",
-    "cover": "flowers-in-the-attic.jpeg",
-    "series": "dollanganger",
-    "date_finished": "01/23/25"
+    "cover": "flowers-in-the-attic.jpeg"
   },
   {
     "title": "Jurassic Park",
@@ -576,8 +476,7 @@
     "pageCount": 466,
     "review": "dinosaurs are cool",
     "cover": "jurassic-park.jpeg",
-    "series": "jurassic park",
-    "date_finished": "01/19/25"
+    "series": "jurassic park"
   },
   {
     "title": "Pride and Prejudice",
@@ -585,8 +484,210 @@
     "rating": 2,
     "pageCount": 400,
     "review": "i just couldnt handle reading this book",
-    "cover": "pride-and-prejudice.jpeg",
-    "series": "",
-    "date_finished": "01/14/25"
+    "cover": "pride-and-prejudice.jpeg"
+  },
+  {
+    "title": "Misery",
+    "author": "Stephen King",
+    "rating": 3,
+    "pageCount": 370,
+    "review": "",
+    "cover": "misery.jpeg"
+  },
+  {
+    "title": "It ends with us",
+    "author": "Colleen Hoover",
+    "rating": 1,
+    "pageCount": 386,
+    "review": "lol",
+    "cover": "it-ends-with-us.jpeg"
+  },
+  {
+    "title": "The Terror",
+    "author": "Dan Simmons",
+    "rating": 3,
+    "pageCount": 835,
+    "review": "",
+    "cover": "the-terror.jpeg"
+  },
+  {
+    "title": "My year of Rest and Relaxation",
+    "author": "Ottessa Moshfegh",
+    "rating": 3,
+    "pageCount": 289,
+    "review": "i'd kill for a nap like this",
+    "cover": "my-year-of-rest-and-relaxation.jpeg"
+  },
+  {
+    "title": "Lapvona",
+    "author": "Ottessa Moshfegh",
+    "rating": 3,
+    "pageCount": 313,
+    "review": "watch out for those old witches",
+    "cover": "lapvona.jpeg",
+  },
+  {
+    "title": "Tomorrow, and Tomorrow, and Tomorrow",
+    "author": "Gabrielle Zevin",
+    "rating": 3,
+    "pageCount": 399,
+    "review": "cool game",
+    "cover": "tomorrow-and-tomorrow-and-tomorrow.jpeg"
+  },
+  {
+    "title": "Tell me an Ending",
+    "author": "Jo Harkin",
+    "rating": 3,
+    "pageCount": 448,
+    "review": "",
+    "cover": "tell-me-an-ending.jpeg"
+  },
+  {
+    "title": "How High we go in the Dark",
+    "author": "Sequoia Nagamatsu",
+    "rating": 3,
+    "pageCount": 293,
+    "review": "",
+    "cover": "how-high-we-go-in-the-dark.jpeg"
+  },
+  {
+    "title": "The Stand",
+    "author": "Stephen King",
+    "rating": 3,
+    "pageCount": 1152,
+    "review": "some have this as stephen king's best book. i disagree. its good, but the ending is lackluster to say the least",
+    "cover": "the-stand.jpeg"
+  },
+  {
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "rating": 4,
+    "pageCount": 336,
+    "review": "suprised me with how good of a thriller this was",
+    "cover": "the-patient.jpeg"
+  },
+  {
+    "title": "The Road",
+    "author": "Cormac McCarthy",
+    "rating": 4,
+    "pageCount": 241,
+    "review": "grim",
+    "cover": "the-road.jpeg"
+  },
+  {
+    "title": "A Thousand Splendid Suns",
+    "author": "Khaled Hosseini",
+    "rating": 4,
+    "pageCount": 372,
+    "review": "",
+    "cover": "a-thousand-splendid-suns.jpeg"
+  },
+  {
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "rating": 4,
+    "pageCount": 371,
+    "review": "great book",
+    "cover": "the-kite-runner.jpeg"
+  },
+  {
+    "title": "The Return of the King",
+    "author": "J.R.R. Tolkien",
+    "rating": 5,
+    "pageCount": 432,
+    "review": "no words",
+    "cover": "the-return-of-the-king.jpeg",
+    "series": "lotr"
+  },
+  {
+    "title": "The Two Towers",
+    "author": "J.R.R. Tolkien",
+    "rating": 5,
+    "pageCount": 448,
+    "review": "best battle of all time",
+    "cover": "the-two-towers.jpeg",
+    "series": "lotr"
+  },
+  {
+    "title": "The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien",
+    "rating": 5,
+    "pageCount": 432,
+    "review": "the best of the trilogy, it sets the world up so well",
+    "cover": "the-fellowship-of-the-ring.jpeg",
+    "series": "lotr"
+  },
+  {
+    "title": "The Hobbit, or There and Back Again",
+    "author": "J.R.R. Tolkien",
+    "rating": 5,
+    "pageCount": 366,
+    "review": "that damn ring",
+    "cover": "the-hobbit.jpeg"
+  },
+  {
+    "title": "I'm Thinking of Ending Things",
+    "author": "Iain Reid",
+    "rating": 3,
+    "pageCount": 241,
+    "review": "not bad",
+    "cover": "im-thinking-of-ending-things.jpeg"
+  },
+  {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "rating": 5,
+    "pageCount": 658,
+    "review": "pinnacle of sci-fi",
+    "cover": "dune.jpeg",
+    "series": "dune"
+  },
+  {
+    "title": "Project Hail Mary",
+    "author": "Andy Weir",
+    "rating": 4,
+    "pageCount": 476,
+    "review": "rocky",
+    "cover": "project-hail-mary.jpeg",
+  },
+  {
+    "title": "The Martian",
+    "author": "Andy Weir",
+    "rating": 4,
+    "pageCount": 369,
+    "review": "potatoes",
+    "cover": "the-martian.jpeg"
+  },
+  {
+    "title": "Flowers for Algernon",
+    "author": "Daniel Keyes",
+    "rating": 4,
+    "pageCount": 311,
+    "review": "that damn mouse",
+    "cover": "flowers-for-algernon.jpeg"
+  },
+  {
+    "title": "Klara and the Sum",
+    "author": "Kazuo Ishiguro",
+    "rating": 4,
+    "pageCount": 303,
+    "review": "",
+    "cover": "klara-and-the-sun.jpeg"
+  },
+  {
+    "title": "The Song of Achilles",
+    "author": "Madeline Miller",
+    "rating": 3,
+    "pageCount": 408,
+    "review": "just another iliad spin",
+    "cover": "the-song-of-achilles.jpeg"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "rating": 4,
+    "pageCount": 368,
+    "review": "big brother is always watching",
+    "cover": "1984.jpeg"
   }
 ]
