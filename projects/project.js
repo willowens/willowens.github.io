@@ -31,7 +31,7 @@ class ProjectCard extends HTMLElement{
 customElements.define('project-card', ProjectCard);
 
 async function loadProjects(){
-  const response = await fetch('./data/projects.json');
+  const response = await fetch('./projects.json');
   if(!response.ok) throw new Error('Network response was not ok');
 
   const projects = await response.json();

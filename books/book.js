@@ -113,7 +113,7 @@ function setupDropdownCloseHandler(){
 async function loadBooks(){
   setupDropdownCloseHandler();
 
-  const response = await fetch('./data/books.json');
+  const response = await fetch('./books.json');
   if(!response.ok) throw new Error('Network response was not ok');
 
   const books = await response.json();
