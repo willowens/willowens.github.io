@@ -2,7 +2,7 @@ import { Chess } from 'https://cdn.jsdelivr.net/npm/chess.js@1.0.0-beta.6/+esm';
 
 const board = Chessboard('board', {
     position: 'start',
-    draggable: true
+    draggable: false //make true to allow other moves to be played
 });
 
 const game = new Chess();
@@ -48,8 +48,8 @@ async function getLastGame() {
 }
 
 function renderMoveList() {
-    const moveListEl = document.querySelector('.move-list');
-    moveListEl.innerHTML = '';
+    const moveList = document.querySelector('.move-list');
+    moveList.replaceChildren();
 
     for (let i = 0; i < history.length; i += 2) {
         const moveNumber = Math.floor(i / 2) + 1;
@@ -80,7 +80,7 @@ function renderMoveList() {
             row.appendChild(blackSpan);
         }
 
-        moveListEl.appendChild(row);
+        moveList.appendChild(row);
     }
 }
 
@@ -110,20 +110,39 @@ function updateMoveListHighlight() {
     });
 }
 
-document.querySelector('.next-btn').addEventListener('click', () => {
-    if (currentIndex < history.length - 1) {
-        jumpToMove(currentIndex + 1);
-    }
-});
+function nextMove(){
+  if (currentIndex < history.length - 1) {
+      jumpToMove(currentIndex + 1);
+  }
+}
 
-document.querySelector('.prev-btn').addEventListener('click', () => {
-    if (currentIndex >= -1) {
-        jumpToMove(currentIndex - 1);
-    }
-});
+function prevMove(){
+  if (currentIndex >= -1) {
+      jumpToMove(currentIndex - 1);
+  }
+}
 
-document.querySelector('.reset-btn').addEventListener('click', () => {
-    jumpToMove(-1);
+document.querySelector('.next-btn').addEventListener('click', () => { nextMove(); });
+
+document.querySelector('.prev-btn').addEventListener('click', () => { prevMove(); });
+
+document.querySelector('.reset-btn').addEventListener('click', () => { jumpToMove(-1); });
+
+window.addEventListener('keydown', (event) => {
+  switch (event.key) {
+    case ' ':
+      jumpToMove(-1);
+      break;
+    case 'ArrowLeft':
+      prevMove();
+      break;
+    case 'ArrowRight':
+      nextMove();
+      break;
+    default:
+      return;
+  }
+  event.preventDefault();
 });
 
 async function getChessStats(){
