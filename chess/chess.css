@@ -131,3 +131,53 @@
     cursor: not-allowed;
     background-color: transparent;
 }
+
+@media (max-width: 768px) {
+    .header-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .header-right,
+    .chess-ratings,
+    .chess-ratings-list {
+        align-items: flex-start;
+    }
+
+    .chess-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 1.5rem auto;
+    }
+
+    .board-section {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #board {
+        width: 100% !important;
+        max-width: 400px;
+    }
+
+    .move-list-container {
+        width: 100%;
+        max-width: 400px;
+        height: 200px;
+    }
+
+    .chess-controls {
+        gap: 0.5rem;
+    }
+
+    .btn {
+        flex: 1;
+        padding: 0.6rem 0.5rem;
+        text-align: center;
+    }
+}
