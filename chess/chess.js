@@ -38,7 +38,8 @@ async function getChessStats(){
     for (const control of TIME_CONTROLS) {
         if (chessStats[`chess_${control}`]?.last) {
             const rating = chessStats[`chess_${control}`].last.rating;
-            document.querySelector(`.${control}-rating`)?.textContent = `${control}: ${rating}`;
+            const ratingEl = document.querySelector(`.${control}-rating`);
+            if(ratingEl) ratingEl.textContent = `${control}: ${rating}`;
         }
     }
 }
