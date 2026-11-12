@@ -1,18 +1,6 @@
-import { Chess } from 'https://cdn.jsdelivr.net/npm/chess.js@1.0.0-beta.6/+esm';
+import { setupChessViewer, USER, TIME_CONTROLS, STATS_ENDPOINT, ARCHIVES_ENDPOINT } from './chess-common.js';
 
-const board = Chessboard('board', {
-    position: 'start',
-    draggable: false //make true to allow other moves to be played
-});
-
-const game = new Chess();
-let history = [];
-let currentIndex = -1;
-
-const TIME_CONTROLS = ['rapid', 'blitz', 'bullet'];
-const USER = "snewolliw";
-const STATS_ENDPOINT = `https://api.chess.com/pub/player/${USER}/stats`;
-const ARCHIVES_ENDPOINT = `https://api.chess.com/pub/player/${USER}/games/archives`;
+const viewer = setupChessViewer();
 
 async function getLastGame() {
     const archivesResponse = await fetch(ARCHIVES_ENDPOINT);
@@ -33,116 +21,13 @@ async function getLastGame() {
     }
 
     const lastGame = gamesData.games[gamesData.games.length - 1];
-
     const isBlack = lastGame.black.username.toLowerCase() === USER.toLowerCase();
-    board.orientation(isBlack ? 'black' : 'white');
 
-    game.loadPgn(lastGame.pgn);
-    history = game.history({ verbose: true });
-
-    game.reset();
-    currentIndex = -1;
-    board.position('start');
-
-    renderMoveList();
+    viewer.loadGame(lastGame.pgn, isBlack);
 }
 
-function renderMoveList() {
-    const moveList = document.querySelector('.move-list');
-    moveList.replaceChildren();
-
-    for (let i = 0; i < history.length; i += 2) {
-        const moveNumber = Math.floor(i / 2) + 1;
-        const whiteMove = history[i];
-        const blackMove = history[i + 1];
-
-        const row = document.createElement('div');
-        row.className = 'move-row';
-
-        const numSpan = document.createElement('span');
-        numSpan.className = 'move-number';
-        numSpan.textContent = `${moveNumber}.`;
-        row.appendChild(numSpan);
-
-        const whiteSpan = document.createElement('span');
-        whiteSpan.className = 'move-item';
-        whiteSpan.textContent = whiteMove.san;
-        whiteSpan.dataset.index = i;
-        whiteSpan.addEventListener('click', () => jumpToMove(i));
-        row.appendChild(whiteSpan);
-
-        if (blackMove) {
-            const blackSpan = document.createElement('span');
-            blackSpan.className = 'move-item';
-            blackSpan.textContent = blackMove.san;
-            blackSpan.dataset.index = i + 1;
-            blackSpan.addEventListener('click', () => jumpToMove(i + 1));
-            row.appendChild(blackSpan);
-        }
-
-        moveList.appendChild(row);
-    }
-}
-
-function jumpToMove(targetIndex) {
-    game.reset();
-    currentIndex = targetIndex;
-    for (let i = 0; i <= currentIndex; i++) {
-        game.move(history[i].san);
-    }
-    board.position(currentIndex === -1 ? 'start' : game.fen());
-    updateMoveListHighlight();
-}
-
-function updateMoveListHighlight() {
-    document.querySelectorAll('.move-item').forEach(el => {
-        const idx = parseInt(el.dataset.index);
-        if (idx === currentIndex) {
-            el.classList.add('active');
-            el.scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest',
-                inline: 'nearest'
-            });
-        } else {
-            el.classList.remove('active');
-        }
-    });
-}
-
-function nextMove(){
-  if (currentIndex < history.length - 1) {
-      jumpToMove(currentIndex + 1);
-  }
-}
-
-function prevMove(){
-  if (currentIndex >= -1) {
-      jumpToMove(currentIndex - 1);
-  }
-}
-
-document.querySelector('.next-btn').addEventListener('click', () => { nextMove(); });
-
-document.querySelector('.prev-btn').addEventListener('click', () => { prevMove(); });
-
-document.querySelector('.reset-btn').addEventListener('click', () => { jumpToMove(-1); });
-
-window.addEventListener('keydown', (event) => {
-  switch (event.key) {
-    case ' ':
-      jumpToMove(-1);
-      break;
-    case 'ArrowLeft':
-      prevMove();
-      break;
-    case 'ArrowRight':
-      nextMove();
-      break;
-    default:
-      return;
-  }
-  event.preventDefault();
+document.querySelector('.reset-btn').addEventListener('click', () => {
+    viewer.resetToStart();
 });
 
 async function getChessStats(){
@@ -153,8 +38,7 @@ async function getChessStats(){
     for (const control of TIME_CONTROLS) {
         if (chessStats[`chess_${control}`]?.last) {
             const rating = chessStats[`chess_${control}`].last.rating;
-            const ratingEl = document.querySelector(`.${control}-rating`);
-            if (ratingEl) ratingEl.textContent = `${control}: ${rating}`;
+            document.querySelector(`.${control}-rating`)?.textContent = `${control}: ${rating}`;
         }
     }
 }
