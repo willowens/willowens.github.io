@@ -195,9 +195,31 @@ function renderChart(games, timeControl) {
 }
 
 function loadGameViewer(gameData) {
-    chessViewer = setupChessViewer('../img/chesspieces/wikipedia/{piece}.png');
+    chessViewer = setupChessViewer('.chess-container', '../img/chesspieces/wikipedia/{piece}.png');
 
     const isBlack = gameData.black.username.toLowerCase() === USER.toLowerCase();
+    const playerRating = isBlack ? gameData.black.rating : gameData.white.rating;
+
+    const gameDate = new Date(gameData.end_time * 1000);
+    const formattedDate = gameDate.toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+    });
+
+    const boardSection = document.querySelector('.board-section');
+    const board = document.getElementById('board');
+
+    const gameHeader = document.createElement('div');
+    gameHeader.classList.add('game-meta-header');
+
+    gameHeader.innerHTML = `
+        <span style="color: var(--link);">${formattedDate}</span>
+        <span style="color: var(--ink); font-weight: 400;">elo: ${playerRating}</span>
+    `;
+
+    boardSection.insertBefore(gameHeader, board);
+
     chessViewer.loadGame(gameData.pgn, isBlack);
 
     const resetBtn = document.querySelector('.reset-btn');
