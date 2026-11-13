@@ -1,5 +1,5 @@
 
-import { setupChessViewer, USER, TIME_CONTROLS, STATS_ENDPOINT, ARCHIVES_ENDPOINT } from '../chess-common.js';
+import { setupChessViewer, USER, TIME_CONTROLS, ARCHIVES_ENDPOINT } from '../chess-common.js';
 
 let chartInstance = null;
 let selectedTimeControl = 'rapid';
