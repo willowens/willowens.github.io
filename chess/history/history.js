@@ -1,4 +1,3 @@
-
 import { setupChessViewer, USER, TIME_CONTROLS, ARCHIVES_ENDPOINT } from '../chess-common.js';
 
 let chartInstance = null;
@@ -35,26 +34,40 @@ async function fetchArchives() {
 }
 
 async function loadGamesForArchive(archiveUrl, timeControl) {
-    let filteredGames = [];
+    let allGames = [];
     try {
         const res = await fetch(archiveUrl);
         if (res.ok) {
             const data = await res.json();
             if (data.games) {
-                filteredGames = data.games.filter(g => {
-                    return g.time_class === timeControl || (g.time_control && g.time_control.includes(timeControl));
-                });
+                allGames = data.games;
             }
         }
     } catch (err) {
         console.error('Error fetching archive games:', err);
     }
 
+    const tcGamesMap = {};
+    TIME_CONTROLS.forEach(tc => {
+        tcGamesMap[tc] = allGames.filter(g => {
+            return g.time_class === tc || (g.time_control && g.time_control.includes(tc));
+        });
+    });
+
+    if ((!tcGamesMap[timeControl] || tcGamesMap[timeControl].length === 0) && allGames.length > 0) {
+        const validTc = TIME_CONTROLS.find(tc => tcGamesMap[tc] && tcGamesMap[tc].length > 0);
+        if (validTc) {
+            timeControl = validTc;
+            selectedTimeControl = validTc;
+        }
+    }
+
+    const filteredGames = tcGamesMap[timeControl] || [];
     filteredGames.sort((a, b) => a.end_time - b.end_time);
-    renderChart(filteredGames, timeControl);
+    renderChart(filteredGames, timeControl, tcGamesMap);
 }
 
-function renderChart(games, timeControl) {
+function renderChart(games, timeControl, tcGamesMap = {}) {
     const container = document.querySelector('.chess-container');
 
     const archiveOptions = allArchivesList.map(url => {
@@ -67,19 +80,21 @@ function renderChart(games, timeControl) {
     }).reverse();
 
     container.innerHTML = `
-        <div class="plot-section" style="width: 100%; max-width: 750px; display: flex; flex-direction: column; align-items: center;">
-            <div class="controls-toolbar" style="margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: center; width: 100%;">
-                <div class="time-control-selector" style="display: flex; gap: 0.4rem;">
-                    ${TIME_CONTROLS.map(tc => `
-                        <button class="btn tc-btn ${tc === timeControl ? 'active-tc' : ''}" data-tc="${tc}">${tc}</button>
-                    `).join('')}
+        <div class="plot-section">
+            <div class="controls-toolbar">
+                <div class="time-control-selector">
+                    ${TIME_CONTROLS.map(tc => {
+                        const count = tcGamesMap[tc] ? tcGamesMap[tc].length : 0;
+                        const isDisabled = count === 0;
+                        return `<button class="btn tc-btn ${tc === timeControl ? 'active-tc' : ''}" data-tc="${tc}" ${isDisabled ? 'disabled' : ''}>${tc}</button>`;
+                    }).join('')}
                 </div>
-                <div class="archive-selector" style="display: flex; align-items: center; gap: 0.5rem;">
-                    <select class="archiveDropdown btn" style="cursor: pointer; padding: 0.4rem 0.6rem;"></select>
+                <div class="archive-selector">
+                    <select class="archiveDropdown btn"></select>
                 </div>
                 <button class="btn reset-zoom-btn">Reset Zoom</button>
             </div>
-            <div style="width: 100%; position: relative;">
+            <div class="chart-wrapper">
                 <canvas id="historyChart"></canvas>
             </div>
         </div>
@@ -92,6 +107,7 @@ function renderChart(games, timeControl) {
 
     document.querySelectorAll('.tc-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
+            if (e.target.disabled) return;
             selectedTimeControl = e.target.dataset.tc;
             loadGamesForArchive(selectedArchiveUrl, selectedTimeControl);
         });
@@ -166,8 +182,7 @@ function renderChart(games, timeControl) {
                 zoom: {
                     pan: {
                         enabled: true,
-                        mode: 'x',
-                        threshold: 5,
+                        mode: 'xy',
                     },
                     zoom: {
                         wheel: { enabled: true },
@@ -214,8 +229,8 @@ function loadGameViewer(gameData) {
     gameHeader.classList.add('game-meta-header');
 
     gameHeader.innerHTML = `
-        <span style="color: var(--link);">${formattedDate}</span>
-        <span style="color: var(--ink); font-weight: 400;">elo: ${playerRating}</span>
+        <span class="game-meta-date">${formattedDate}</span>
+        <span class="game-meta-elo">elo: ${playerRating}</span>
     `;
 
     boardSection.insertBefore(gameHeader, board);
