@@ -195,7 +195,7 @@ function renderChart(games, timeControl) {
 }
 
 function loadGameViewer(gameData) {
-    chessViewer = setupChessViewer('.chess-container', '../img/chesspieces/wikipedia/{piece}.png');
+    chessViewer = setupChessViewer('../img/chesspieces/wikipedia/{piece}.png');
 
     const isBlack = gameData.black.username.toLowerCase() === USER.toLowerCase();
     const playerRating = isBlack ? gameData.black.rating : gameData.white.rating;
