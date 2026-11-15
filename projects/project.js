@@ -6,7 +6,7 @@ class ProjectCard extends HTMLElement{
   }
 
   connectedCallback(){
-    if (this._rendered) return;
+    if(this._rendered) return;
     this._rendered = true;
 
     const { slug, title, summary, tags = [] } = this.project;
@@ -17,7 +17,6 @@ class ProjectCard extends HTMLElement{
         <span class="preview-label">${title}</span>
       </div>
       <div class="content">
-        <h3 class="title">${title}</h3>
         <p class="summary">${summary}</p>
         <div class="tags">${tagHtml}</div>
       </div>

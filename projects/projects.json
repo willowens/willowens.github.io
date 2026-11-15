@@ -1,8 +1,14 @@
 [
   {
-    "slug": "temp-project",
-    "title": "Temp Project",
-    "summary": "a really cool project",
-    "tags": ["c", "wip"]
+    "slug": "qemu-gpio",
+    "title": "qemu gpio",
+    "summary": "using qemu to access gpio from a 32bit container on a 64bit host",
+    "tags": ["c", "docker"]
+  },
+  {
+    "slug": "chess-engine",
+    "title": "chess engine",
+    "summary": "a simple chess engine",
+    "tags": ["wasm", "c", "js"]
   }
 ]

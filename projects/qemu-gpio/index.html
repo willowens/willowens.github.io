@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>qemu gpio</title>
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="icon" type="image/ico" href="../../favicon.ico">
+</head>
+<body>
+    <header class="page-header">
+        <nav class="page-nav">
+            <a href="/">/home</a>
+            <a href="/projects">/projects</a>
+            <a href="/books">/books</a>
+            <a href="/chess">/chess</a>
+        </nav>
+    </header>
+    <main class="project-wrapper">
+        <h2>qemu gpio</h2>
+        <p class="subtitle">accessing gpio through a qemu emulation layer</p>
+        <h3 class="section-title">Getting Started</h3>
+            <p>This project required a development board running Debian 13 to run applications controlling gpio pins</p>
+            <p>To expedite development, using a 32bit debian docker image and qemu as an emulation layer to the 64 bit host would remove the dependency on having the physical board and flashing code to it to test everytime</p>
+
+        <h3 class="section-title">Qemu emulation using binfmt_misc</h3>
+            <p>Miscellaneous Binary Format allows the execution of non-native files on the linux host system</p>
+            <p>It is managed by files in <code>/proc/sys/fs/binfmt_misc</code></p>
+            <p>The <code>tonistiigi/binfmt</code> docker image builds qemu-user emulator binaries which can be used by the host's binfmt_misc system</p>
+            <p>You can install the necessary arm binary by calling <code>docker run --privileged --rm tonistiigi/binfmt --install arm</code> which should show the following in <code>/proc/sys/fs/binfmt_misc/qemu-arm</code></p>
+            <div class="image-wrapper">
+                <img src="./images/qemu-arm.png" alt="qemu arm contents">
+                <span class="image-caption">fig 1.0: qemu-arm binary installed onto linux host binfmt_misc</span>
+            </div>
+            <p>Now, running a <code>arm32v7/debian:trixie</code> container will work on the 64bit host because of the qemu emulation layer</p>
+
+        <h3 class="section-title">libgpiod</h3>
+            <p><a href="https://libgpiod.readthedocs.io/en/master/#">libgpiod</a> is a c library used for interacting with gpio on linux. Per<code> linux/gpio.h</code>, there are several v1 ioctls and new v2 ioctls. Libgpiod v1.x.x works only with the now depracated v1 ioctls</p>
+            <p>By default debian:trixie comes with v1.6.3, which will then require libgpiod to be built from source to support v2 ioctls</p>
+            <p>The libgpiod docs detail how to build from source, with the following configuration required to have the tools & c++ bindings</p>
+            <blockquote>
+                <code>For versions v2.3+ -> meson setup .. -Dtools=enabled -Dbindings-cxx=enabled</code>
+                <code>v2.2 and earlier -> ./autogen.sh --enable-tools=yes --enable-bindings-cxx=yes</code>
+            </blockquote>
+
+        <h3 class="section-title">Accessing gpio devices in a container</h3>
+            <p>Map the device to the container using the --device flag</p>
+            <blockquote><p><code>docker run --rm -it --platform linux/arm/v7 --device=/dev/gpiochip0 debian:trixie bash</code></p></blockquote>
+            <p>This will pass the device into the container, but will not allow access unless the root user is being used. This can be resolved by creating a gpio group, adding the user to it, and updating rules for device access</p>
+            <blockquote>
+                <p><code>sudo goupdadd -f gpio</code></p>
+                <p><code>sudo usermod -aG gpio $USER</code></p>
+                <p>create a custom udev rule in <code>/etc/udev/rules.d</code></p>
+                <p><code>SUBSYSTEM=="gpio", KERNEL=="gpiochip*", GROUP="gpio", MODE="0660"</code></p>
+            </blockquote>
+            <p>Now running <code>gpiodetect</code> should no longer show a permission error</p>
+
+        <h3 class="section-title">unsupported ioctl() command</h3>
+            <p>The emulation layer is running, but qemu does not support every system ioctl() call, of which gpio is one</p>
+            <p>The ioctl calls that are made by <code>gpiodetect</code> are never escaping the emulation layer. There is no passthrough to convert the system call from arm32 to X86_64</p>
+            <blockquote>The qemu source code must be modified to add gpio ioctl() support to allow this communication to occur</blockquote>
+
+        <h3 class="section-title">Qemu Source</h3>
+            <p>The <a href="https://github.com/qemu/QEMU">qemu</a> repo is fairly extensive, but there are only a couple files all located in <code>linux-user</code> we need to modify to add gpio support</p>
+            <blockquote>
+                <p><code>ioctls.h --> all ioctl() definitions</code></p>
+                <p><code>syscall.c --> main functions or handling incoming ioctls()</code></p>
+                <p><code>syscall_defs.h --> ioctl() struct definitions</code></p>
+            </blockquote>
+            <h4 class="sub-section-title">syscall.c</h4>
+                <p>Only need to add the import to <code>linux/gpio.h</code></p>
+            <h4 class="sub-section-title">syscall_defs.h</h4>
+                <p>The ioctl() struct definitions for the v2 gpio ioctl() calls need to be added in here</p>
+                <p>They can be found in <code>/usr/include/linux/gpio.h</code></p>
+                <div class="image-wrapper">
+                    <img src="./images/gpiochip-info.png" alt="linux struct gpiochip_info definition">
+                    <span class="image-caption">fig 2.0: linux gpio.h struct gpiochip_info definition </span>
+                </div>
+                <p>Taking the linux definition of gpiochip_info, we add it to syscall_defs.h, producing the following</p>
+                <div class="image-wrapper">
+                    <img src="./images/gpiochip-qemu-info.png" alt="qemu struct gpiochip_info definition">
+                    <span class="image-caption">fig 3.0: qemu gpiochip_info definition </span>
+                </div>
+            <h4 class="sub-section-title">ioctls.h</h4>
+                <p>Qemu uses several macros when defining ioctls, we will use the IOCTL() macro for ours</p>
+                <div class="image-wrapper">
+                    <img src="./images/gpiochip-info-ioctl.png" alt="qemu gpiochip_info ioctl definition">
+                    <span class="image-caption">fig 4.0: qemu gpiochip_info ioctl definition </span>
+                </div>
+                <p>We add a check for the linux definition of the GPIO_GET_CHIPINFO_IOCTL</p>
+                <p>IOC_R means we expect this to be a READ call only</p>
+                <p>The final argument is the expected value/return, where we are telling qemu to expect a certain size char array, based on the linux ioctl structs we created</p>
+                <p class="comment">*Based on how qemu defines other ioctls, there is certainly another way to define the gpio ioctls so they work, but for now these work</p>
+        <h3 class="section-title">Building a custom binary</h3>
+            <p>Wih the modified qemu source, we now need to build it into our now custom, gpio ioctl support qemu-arm-static binary</p>
+            <p>Once built, we use the same docker image from before <code>tonistiigi/binfmt</code> as the base image, and copy the custom binary to <code>/usr/bin/qemu-arm</code> to build a custom qemu-binfmt image</p>
+            <p>Like before, the image will need to be installed to the host kernel. Once done the custom qemu emulation is ready to test</p>
+        <h3 class="section-title">Ensuring deployment</h3>
+                <p>An issue I faced was that my custom binary was not being used, the install was "working" but the old binary continued to be in use. A guaranteed install/reset can be done the following way</p>
+                <blockquote><code>echo -1 | sudo tee /proc/sys/fs/binfmt_misc/status</code></blockquote>
+                <p>Doing this resets binfmt_misc. Then the custom docker image can be installed with the new, gpio supporting binary</p>
+                <p>Now running <code>gpiodetect</code> from the arm32 container should yield a sucessful call with a similar response to below</p>
+                <div class="image-wrapper">
+                    <img src="./images/gpiodetect.png" alt="gpiodetect output">
+                    <span class="image-caption">fig 5.0: gpiodetect output</span>
+                </div>
+        <h3 class="section-title">Debugging tools</h3>
+            <blockquote>
+                <p><code>strace -f -p [container pid] -o strace-logs.txt</code></p>
+                <p>Running this on the host will see logs from the running container</p>
+                <p>You can also run <code>strace -e ioctl</code> on the host to only see ioctl calls</p>
+            </blockquote>
+            <blockquote>
+                <p><code>QEMU_LOG=unimp,strace gpiodetect</code></p>
+                <p>When running <code>gpiodetect</code> from the arm32 container, passing the QEMU_LOG env variable will allow for additional logging when running commands</p>
+            </blockquote>
+        <h3 class="section-title">Conclusion</h3>
+            <p>This was a challenging, frustrating, yet fun and rewarding project. There were several steps along the way that required learning new things about qemu, translating 32b -> 64b, gpio & linux ioctls and more</p>
+            <p>Some information is missing from here, and I may revisit to clean it up, but this acts as a sort of guide to how I went about solving this problem</p>
+            <p>Onto the next one</p>
+    </main>
+</body>
+</html>
