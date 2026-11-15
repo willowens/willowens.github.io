@@ -43,8 +43,69 @@
     justify-content: center;
     margin: 2.5rem auto;
     width: 100%;
-    max-width: 750px;
+    max-width: 820px;
     padding: 0 1rem;
+}
+
+.board-with-eval {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.eval-bar {
+    position: relative;
+    width: 18px;
+    flex-shrink: 0;
+    background: #1a1a1a;
+    border: 1px solid var(--link);
+    border-radius: 3px;
+    overflow: hidden;
+    align-self: stretch;
+}
+
+.eval-bar-fill {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    background: #f0ead6;
+    transition: height 0.25s ease;
+}
+
+.eval-bar-label {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    white-space: nowrap;
+    pointer-events: none;
+    text-shadow: 0 0 3px #f0ead6, 0 0 3px #f0ead6;
+    z-index: 1;
+}
+
+.variation-label {
+    font-size: 0.75rem;
+    color: var(--link);
+    opacity: 0.85;
+    margin: 0.65rem 0 0.35rem;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+}
+
+.variation-row .move-item.variation-move {
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.move-item.variation-move.active {
+    background-color: var(--ink);
+    color: var(--bg);
 }
 
 .move-list-container {
@@ -101,10 +162,16 @@
 
 .chess-controls {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     margin-top: 1.25rem;
     justify-content: center;
     width: 100%;
+}
+
+.return-game-btn:not([hidden]) {
+    border-color: var(--ink);
+    color: var(--ink);
 }
 
 .btn {
@@ -154,15 +221,22 @@
 
     .board-section {
         width: 100%;
-        max-width: 400px;
+        max-width: 420px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    #board {
-        width: 100% !important;
-        max-width: 400px;
+    .board-with-eval {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .board-with-eval #board {
+        flex: 1;
+        width: auto !important;
+        max-width: none;
+        min-width: 0;
     }
 
     .move-list-container {

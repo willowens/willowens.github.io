@@ -223,7 +223,7 @@ function loadGameViewer(gameData) {
     });
 
     const boardSection = document.querySelector('.board-section');
-    const board = document.getElementById('board');
+    const boardRow = boardSection?.querySelector('.board-with-eval');
 
     const gameHeader = document.createElement('div');
     gameHeader.classList.add('game-meta-header');
@@ -233,14 +233,19 @@ function loadGameViewer(gameData) {
         <span class="game-meta-elo">elo: ${playerRating}</span>
     `;
 
-    boardSection.insertBefore(gameHeader, board);
+    if (boardSection && boardRow) {
+        boardSection.insertBefore(gameHeader, boardRow);
+    }
 
     chessViewer.loadGame(gameData.pgn, isBlack);
 
-    const resetBtn = document.querySelector('.reset-btn');
-    resetBtn.textContent = 'Back to Plot';
-    resetBtn.addEventListener('click', () => {
+    const backBtn = document.createElement('button');
+    backBtn.type = 'button';
+    backBtn.className = 'btn back-plot-btn';
+    backBtn.textContent = 'Back to Plot';
+    backBtn.addEventListener('click', () => {
         loadGamesForArchive(selectedArchiveUrl, selectedTimeControl);
     });
+    document.querySelector('.chess-controls')?.appendChild(backBtn);
 }
 fetchArchives().catch((error) => console.error('Failed fetching archives:', error));

@@ -26,10 +26,6 @@ async function getLastGame() {
     viewer.loadGame(lastGame.pgn, isBlack);
 }
 
-document.querySelector('.reset-btn').addEventListener('click', () => {
-    viewer.resetToStart();
-});
-
 async function getChessStats(){
     const response = await fetch(STATS_ENDPOINT);
     if(!response.ok) throw new Error('Bad Network Request');
