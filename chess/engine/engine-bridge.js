@@ -1,7 +1,7 @@
 import createChessEngine from './engine.js';
 
 const DEFAULT_DEPTH = 10;
-const WASM_URL = new URL('./build/engine.wasm', import.meta.url).href;
+const WASM_URL = new URL('./engine.wasm', import.meta.url).href;
 
 let modulePromise = null;
 let evalToken = 0;
