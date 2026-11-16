@@ -36,7 +36,7 @@
 
         <h3 class="section-title">libgpiod</h3>
             <p><a href="https://libgpiod.readthedocs.io/en/master/#">libgpiod</a> is a c library used for interacting with gpio on linux. Per<code> linux/gpio.h</code>, there are several v1 ioctls and new v2 ioctls. Libgpiod v1.x.x works only with the now depracated v1 ioctls</p>
-            <p>By default debian:trixie comes with v1.6.3, which will then require libgpiod to be built from source to support v2 ioctls</p>
+            <p>By default debian:trixie comes with v1.6.3, in order to use v2 ioctls we will have to build libgpiod from source</p>
             <p>The libgpiod docs detail how to build from source, with the following configuration required to have the tools & c++ bindings</p>
             <blockquote>
                 <code>For versions v2.3+ -> meson setup .. -Dtools=enabled -Dbindings-cxx=enabled</code>
@@ -90,9 +90,9 @@
                 <p>We add a check for the linux definition of the GPIO_GET_CHIPINFO_IOCTL</p>
                 <p>IOC_R means we expect this to be a READ call only</p>
                 <p>The final argument is the expected value/return, where we are telling qemu to expect a certain size char array, based on the linux ioctl structs we created</p>
-                <p class="comment">*Based on how qemu defines other ioctls, there is certainly another way to define the gpio ioctls so they work, but for now these work</p>
+                <p class="comment">*Based on how qemu defines other ioctls, there is certainly another way to define the gpio ioctls so they work, but these will do for now</p>
         <h3 class="section-title">Building a custom binary</h3>
-            <p>Wih the modified qemu source, we now need to build it into our now custom, gpio ioctl support qemu-arm-static binary</p>
+            <p>Wih the modified qemu source, we now need to build it into our now custom, gpio ioctl supported qemu-arm-static binary</p>
             <p>Once built, we use the same docker image from before <code>tonistiigi/binfmt</code> as the base image, and copy the custom binary to <code>/usr/bin/qemu-arm</code> to build a custom qemu-binfmt image</p>
             <p>Like before, the image will need to be installed to the host kernel. Once done the custom qemu emulation is ready to test</p>
         <h3 class="section-title">Ensuring deployment</h3>
@@ -115,7 +115,7 @@
                 <p>When running <code>gpiodetect</code> from the arm32 container, passing the QEMU_LOG env variable will allow for additional logging when running commands</p>
             </blockquote>
         <h3 class="section-title">Conclusion</h3>
-            <p>This was a challenging, frustrating, yet fun and rewarding project. There were several steps along the way that required learning new things about qemu, translating 32b -> 64b, gpio & linux ioctls and more</p>
+            <p>This was a challenging, frustrating, yet fun and rewarding project. There were several steps along the way that required learning new things about qemu, linux ioctls, debugging with strace and much more</p>
             <p>Some information is missing from here, and I may revisit to clean it up, but this acts as a sort of guide to how I went about solving this problem</p>
             <p>Onto the next one</p>
     </main>
