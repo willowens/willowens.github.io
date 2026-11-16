@@ -48,7 +48,7 @@
             <blockquote><p><code>docker run --rm -it --platform linux/arm/v7 --device=/dev/gpiochip0 debian:trixie bash</code></p></blockquote>
             <p>This will pass the device into the container, but will not allow access unless the root user is being used. This can be resolved by creating a gpio group, adding the user to it, and updating rules for device access</p>
             <blockquote>
-                <p><code>sudo goupdadd -f gpio</code></p>
+                <p><code>sudo groupdadd -f gpio</code></p>
                 <p><code>sudo usermod -aG gpio $USER</code></p>
                 <p>create a custom udev rule in <code>/etc/udev/rules.d</code></p>
                 <p><code>SUBSYSTEM=="gpio", KERNEL=="gpiochip*", GROUP="gpio", MODE="0660"</code></p>
